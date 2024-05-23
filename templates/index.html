@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+    <div class="container" style="display: flex;  align-content: center; justify-content: center;">
+        <ul>
+            <li><a href="{% url 'login' %}">LOGIN</a></li>
+            <li><a href="{% url 'register' %}">REGISTER</a></li>
+        </ul>
+    </div>
+{% endblock %}

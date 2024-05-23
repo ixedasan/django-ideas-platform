@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+    <div class="container">
+        <h1 style="display: flex; justify-content: center">IDEAS</h1>
+        <div style="display: flex; justify-content: center">
+            <a href="{% url 'idea_create' %}">Create Idea</a>
+        </div>
+        {% for idea in ideas %}
+            <div style="border: solid black; margin: 12px; padding: 6px">
+            
+                <h2>{{ idea.title }}</h2>
+                <p>{{ idea.summary }}</p>
+                <a href="{% url 'idea_detail' idea.id%}">Read more</a>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

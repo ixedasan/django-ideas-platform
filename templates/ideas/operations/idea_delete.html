@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+
+    <div class="container">
+        <h1>Delete</h1>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <p>Are you sure?</p>
+            <button type="submit">Delete Idea</button>
+            <a href="{% url 'idea_detail' idea.id %}">Cancel</a>
+        </form>
+    </div>
+{% endblock %}

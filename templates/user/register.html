@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+    <div class="container">
+    <form method="POST" class="form-group">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Register"/>
+    </form>
+
+    <p>Have an account?<a href="{% url 'login' %}">Login</a></p>
+    </div>
+    
+{% endblock %}
